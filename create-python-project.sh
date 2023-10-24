@@ -43,7 +43,7 @@ mkdir code
 mkdir tests
 
 #create main file
-printf "if __name__ ==  "__main__":\n    pass" > code/main.py
+touch code/main.py
 #create test file
 printf "import pytest" > tests/test.py
 
