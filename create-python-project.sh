@@ -21,10 +21,6 @@ while [[ "$#" -gt 0 ]]; do
     esac
 done
 
-# Install the specified packages using pip
-for package in "${packages[@]}"; do
-    pip install "$package"
-done
 
 # Project creation
 # create and activate venv
@@ -33,6 +29,11 @@ source ./venv/bin/activate
 
 # pip installs
 pip install pytest
+
+# Install the specified packages from the flag
+for package in "${packages[@]}"; do
+    pip install "$package"
+done
 
 pip freeze > requirements.txt
 
