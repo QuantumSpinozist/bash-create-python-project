@@ -15,12 +15,12 @@ mkdir code
 mkdir tests
 
 #create main file
-printf "if __name__ ==  "main.py":\n    pass" > code/main.py
+printf "if __name__ ==  "__main__":\n    pass" > code/main.py
 #create test file
 printf "import pytest" > tests/test.py
 
 # create local git repo
-'venv' > .gitignore
+printf "venv/" > .gitignore
 
 git init
 git add .
